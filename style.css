@@ -1,11 +1,15 @@
 .yellow{
     background-color: yellow;
+    border: 4px solid black;
+    margin: 20px;
 }
 #Meta{
     background-color: blue;
+    margin-top: 60px;
 }
 #Microsoft{
     background-color: brown;
+    padding: 70px;
 }
 .span{
     color: white;
