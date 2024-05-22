@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="myDiv">Hello World!</div>
+    <button onclick="changeStyle()">Change Style</button> -->
+    
+    <script>
+        function changeStyle(){
+            const myDiv = document.getElementById("myDiv");
+            myDiv.style.color = 'blue';
+            myDiv.style.frontSize = '20px';
+            myDiv.style.backgroundColor = 'yellow';
+
+        }
+    </script>
+    <style>
+        .highlight1{
+            background-color: yellow;
+            font-weight: bold;
+            font-size: 50px;
+            color: blue;
+        }
+        .main{
+            color: rebeccapurple;
+            font-size: 20px;
+        }
+        .main2{
+            color: red;
+        }
+    </style>
+    <div id="myDiv1" class="highlight1 main  main2">Hello, World</div>
+    <button onclick="toggleHighlight()">Toggle highlight</button>
+    <script>
+        function toggleHighlight(){
+            let myDiv1 = document.getElementById('myDiv1');
+            myDiv1.classList.toggle('highlight1');
+
+        }
+    </script> 
+    <div id="container"></div>
+    <button onclick="addParagraph()">Add paragraph</button>
+    <script>
+        function addParagraph(){
+            let container = document.getElementById("container")
+            let newParagraph = document.createElement('p');
+            newParagraph.textContent = "This is a new Paragraph";
+            container.appendChild(newParagraph);
+        }
+
+    </script>
+    <ul id="list">
+        <li id="item1">Item 1</li>
+        <li>Item 2</li>
+    </ul>
+    <button onclick="AddItem()">Add Item</button>
+    <script>
+        function AddItem(){
+            const list = document.getElementById("list");
+            const item1 = document.getElementById('item1');
+            const newItem = document.createElement('li');
+            newItem.textContent = "Item 3";
+            list.appendChild(newItem, item1);
+            list/insertBefore(newItem, item1);
+            //insertBefore (new Item to be inserted, before which element it will be inserted)
+        }
+    </script>
+    <ul id="listt">
+        <li id="item1">Item 1</li>
+        <li id="item2">Item 2</li>
+
+
+    </ul>
+    <button onclick="removeItem()">Remove Item 1</button>
+    <script>
+        function removeItem(){
+            const list1 = document.getElementById('listt')
+            list.remove();
+        }
+    </script>
+    <div id="Div"></div>
+    <button onclick="AddPara()">Add para</button>
+    <button onclick="removePara()"> Remove para</button>
+    <script>
+        function Addpara(){
+            let container = document.getElementById("Div")
+            let newParagraph = document.createElement('p');
+            newParagraph.textContent = "This is a new Paragraph";
+            container.appendChild(newParagraph);
+        }
+        function removePara(){
+            const removepara = document.getElementById('Div')
+            removepara.remove();
+        }
+    </script>
+
+    <button id="myButton">Click me</button>
+    <p id="message"></p>
+    <script>
+        const button = document.getElementById('myButton');
+        button.addEventListener('click', ()=>{
+            const message= document.getElementById('message')
+            message.textContent = "Button was clicked!";
+
+        })
+        // addEventListener ('Action Name', "what to perform if this action happens")
+    </script>
+</body>
+</html>
